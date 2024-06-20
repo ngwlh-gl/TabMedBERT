@@ -1,0 +1,115 @@
+export CUDA_VISIBLE_DEVICES=3
+
+
+python revise_train_4_cls.py \
+    --embedding_type bert \
+    --pretrained_dir /data1/gl/project/Extractor/pretrained_models/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext \
+    --max_position_embeddings 512 \
+    --re_pretrained_dir /data1/gl/project/ner-relation/pretrained/neg_mlm_full/em_best.ckpt \
+    --batch_size 16 \
+    --task cdr  \
+    --train_file /data1/gl/project/ner-relation/revise/revise_data/cdr/train.json \
+    --dev_file /data1/gl/project/ner-relation/revise/revise_data/cdr/dev.json \
+    --test_file /data1/gl/project/ner-relation/revise/revise_data/cdr/test.json \
+    --evaluate_during_training \
+    --save_total_limit 1 \
+    --output_dir /data1/gl/project/ner-relation/revise/revise_4/ckpts/cdr/neg-mlm-em/1.0neg \
+    --logs /data1/gl/project/ner-relation/revise/revise_4/logs/cdr/neg-mlm-em/1.0neg \
+    --do_train \
+    --do_eval \
+    --do_test \
+    --use_pos_prompt \
+    --use_neg \
+    --only_use_first \
+    --neg_ratio 1.0 \
+    --save_steps 100 \
+    --logging_steps 10 \
+    --learning_rate 2e-5 \
+    --num_train_epochs 15 \
+    --eval_all_checkpoints \
+    --max_prompt_times 6
+
+python revise_train_4_cls.py \
+    --embedding_type bert \
+    --pretrained_dir /data1/gl/project/Extractor/pretrained_models/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext \
+    --max_position_embeddings 512 \
+    --re_pretrained_dir /data1/gl/project/ner-relation/pretrained/neg_mlm_full/em_best.ckpt \
+    --batch_size 16 \
+    --task cdr  \
+    --train_file /data1/gl/project/ner-relation/revise/revise_data/cdr/train.json \
+    --dev_file /data1/gl/project/ner-relation/revise/revise_data/cdr/dev.json \
+    --test_file /data1/gl/project/ner-relation/revise/revise_data/cdr/test.json \
+    --evaluate_during_training \
+    --save_total_limit 1 \
+    --output_dir /data1/gl/project/ner-relation/revise/revise_4/ckpts/cdr/neg-mlm-em/0.5neg \
+    --logs /data1/gl/project/ner-relation/revise/revise_4/logs/cdr/neg-mlm-em/0.5neg \
+    --do_train \
+    --do_eval \
+    --do_test \
+    --use_pos_prompt \
+    --use_neg \
+    --only_use_first \
+    --neg_ratio 0.5 \
+    --save_steps 100 \
+    --logging_steps 10 \
+    --learning_rate 2e-5 \
+    --num_train_epochs 15 \
+    --eval_all_checkpoints \
+    --max_prompt_times 6
+
+python revise_train_4_cls.py \
+    --embedding_type bert \
+    --pretrained_dir /data1/gl/project/Extractor/pretrained_models/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext \
+    --max_position_embeddings 512 \
+    --re_pretrained_dir /data1/gl/project/ner-relation/pretrained/neg_mlm_full/em_best.ckpt \
+    --batch_size 16 \
+    --task cdr  \
+    --train_file /data1/gl/project/ner-relation/revise/revise_data/cdr/train.json \
+    --dev_file /data1/gl/project/ner-relation/revise/revise_data/cdr/dev.json \
+    --test_file /data1/gl/project/ner-relation/revise/revise_data/cdr/test.json \
+    --evaluate_during_training \
+    --save_total_limit 1 \
+    --output_dir /data1/gl/project/ner-relation/revise/revise_4/ckpts/cdr/neg-mlm-em/2.0neg \
+    --logs /data1/gl/project/ner-relation/revise/revise_4/logs/cdr/neg-mlm-em/2.0neg \
+    --do_train \
+    --do_eval \
+    --do_test \
+    --use_pos_prompt \
+    --use_neg \
+    --only_use_first \
+    --neg_ratio 2.0 \
+    --save_steps 100 \
+    --logging_steps 10 \
+    --learning_rate 2e-5 \
+    --num_train_epochs 15 \
+    --eval_all_checkpoints \
+    --max_prompt_times 6
+
+
+python revise_train_4_cls.py \
+    --embedding_type bert \
+    --pretrained_dir /data1/gl/project/Extractor/pretrained_models/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext \
+    --max_position_embeddings 512 \
+    --re_pretrained_dir /data1/gl/project/ner-relation/pretrained/neg_mlm_full/em_best.ckpt \
+    --batch_size 16 \
+    --task cdr  \
+    --train_file /data1/gl/project/ner-relation/revise/revise_data/cdr/train.json \
+    --dev_file /data1/gl/project/ner-relation/revise/revise_data/cdr/dev.json \
+    --test_file /data1/gl/project/ner-relation/revise/revise_data/cdr/test.json \
+    --evaluate_during_training \
+    --save_total_limit 1 \
+    --output_dir /data1/gl/project/ner-relation/revise/revise_4/ckpts/cdr/neg-mlm-em/1.5neg \
+    --logs /data1/gl/project/ner-relation/revise/revise_4/logs/cdr/neg-mlm-em/1.5neg \
+    --do_train \
+    --do_eval \
+    --do_test \
+    --use_pos_prompt \
+    --use_neg \
+    --only_use_first \
+    --neg_ratio 1.5 \
+    --save_steps 100 \
+    --logging_steps 10 \
+    --learning_rate 2e-5 \
+    --num_train_epochs 15 \
+    --eval_all_checkpoints \
+    --max_prompt_times 6
